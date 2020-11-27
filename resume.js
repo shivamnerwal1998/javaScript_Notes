@@ -1,5 +1,5 @@
 var count = 0 ; 
-  
+
 function addDetails()
 {
     count++ ; 
@@ -18,7 +18,6 @@ function addDetails()
 
 }
 
-
 function removeDetails()
 {
     let target = document.getElementById("education");
@@ -34,10 +33,19 @@ function removeDetails()
 
     
 }
+
+function setEducation(doc)
+{
+    let target  = document.getElementsByTagName("tr");
+    console.log(target);
+
+}
+
 function downloadPdf()
 {
     
     let doc = new jsPDF();
+    
     doc.setFontType("bold");
     doc.text(20,20,document.getElementById("name").value);
     doc.setFontType("normal");
@@ -52,11 +60,7 @@ function downloadPdf()
     doc.text(50,60,"qualification") ;
     doc.setFontType("normal");
     doc.setFontSize(12)
-
-
-    doc.save("cv.pdf");
+    doc.save("cv.pdf"); 
+    setEducation(doc);
     
-  
-
-
 }
