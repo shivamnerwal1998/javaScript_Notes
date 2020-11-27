@@ -36,15 +36,27 @@ function removeDetails()
 }
 function downloadPdf()
 {
+    
     let doc = new jsPDF();
     doc.setFontType("bold");
     doc.text(20,20,document.getElementById("name").value);
     doc.setFontType("normal");
     doc.setFontSize(12);
-    doc.text(20,20,"Date of birth:"+document.getElementById("dob").value);
-    doc.text(20,30,"Father's Name"+document.getElementById("fName").value);
-    doc.text(20,48,"contact number:"+document.getElementById("cont").value);
-    doc.text(20,36,"Email:"+document.getElementById("Email").value);
+    doc.text(20,30,"Date of birth:"+document.getElementById("dob").value);
+    doc.text(20,35,"Father's Name"+document.getElementById("fName").value);
+    doc.text(20,40,"contact number:"+document.getElementById("cont").value);
+    doc.text(20,45,"Email:"+document.getElementById("Email").value);
+    doc.text(20,50,"Address:"+document.getElementById("add").value);
+    doc.setFontType("bold");
+    doc.setFontSize(16)
+    doc.text(50,60,"qualification") ;
+    doc.setFontType("normal");
+    doc.setFontSize(12)
+
+
     doc.save("cv.pdf");
+    
+  
+
 
 }
