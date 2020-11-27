@@ -34,12 +34,6 @@ function removeDetails()
     
 }
 
-function setEducation(doc)
-{
-    let target  = document.getElementsByTagName("tr");
-    console.log(target);
-
-}
 
 function downloadPdf()
 {
@@ -61,6 +55,6 @@ function downloadPdf()
     doc.setFontType("normal");
     doc.setFontSize(12)
     doc.save("cv.pdf"); 
-    setEducation(doc);
+    
     
 }
